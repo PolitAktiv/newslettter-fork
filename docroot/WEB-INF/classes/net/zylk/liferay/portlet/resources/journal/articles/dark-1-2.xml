@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+
+<root available-locales="en_US" default-locale="en_US">
+	<dynamic-element name="mainTitle" index="0" type="text" index-type="keyword">
+		<dynamic-content language-id="en_US"><![CDATA[Zylk.net certificada en calidad ISO 20000-1 para la gestión de servicios de soporte]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="mainLink" index="0" type="text" index-type="keyword">
+		<dynamic-content language-id="en_US"><![CDATA[http://www.zylk.net]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="mainText" index="0" type="text_box" index-type="keyword">
+		<dynamic-content language-id="en_US"><![CDATA[No hemos escrito durante un largo tiempo pero hemos estado trabajando duro y ahora estamos orgullosos de poder mostrar nuestro nuevo certificado ISO / IEC 20000-1:2011, en calidad de gestión de servicios TI relativos a la prestación de asistencia técnica, mantenimiento correctivo y evolutivo y garantías para las aplicaciones de software a medida y los sistemas de código abierto y los productos ofrecidos en nuestro portfoleo.]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="mainImage" index="0" type="text" index-type="keyword">
+		<dynamic-content language-id="en_US"><![CDATA[http://www.zylk.net/image/image_gallery?uuid=1ad04f8d-0444-405e-ab77-76e5a80f12e2&groupId=10102&t=1419326927934]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="title1" index="0" type="text" index-type="keyword">
+		<dynamic-content language-id="en_US"><![CDATA[Optimizaciones SEO para Liferay IV]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="link1" index="0" type="text" index-type="keyword">
+		<dynamic-content language-id="en_US"><![CDATA[http://www.zylk.net/es/web/guest/web-2-0/blog/-/blogs/optimizaciones-seo-para-liferay-iv]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="text1" index="0" type="text_box" index-type="keyword">
+		<dynamic-content language-id="en_US"><![CDATA[Siguiendo con los temas de SEO para liferay explicados en anteriores post, vamos a explicar un pequeño tip que sin cambiar nada en liferay nos permitirá disponer urls amigables para los contenidos servidos por el journal. Como intorducción decir que existe un concepro de url amigable dentro del portal y que es bastante flexible y programable. La base de este modelo un mapeo entre parametros del portal y partes de la url. Por ejemplo para un articulo de contenido se puede crear una url con los siguientes elementos]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="image1" index="0" type="text" index-type="keyword">
+		<dynamic-content language-id="en_US"><![CDATA[http://www.zylk.net/image/image_gallery?uuid=a98925dc-9230-4cc5-b223-4c4948faecbf&groupId=10102&t=1419327277770]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="title2" index="0" type="text" index-type="keyword">
+		<dynamic-content language-id="en_US"><![CDATA[Content Links and Share Content with users in Alfresco Share]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="link2" index="0" type="text" index-type="keyword">
+		<dynamic-content language-id="en_US"><![CDATA[http://www.zylk.net/es/web/guest/web-2-0/blog/-/blogs/content-links-and-share-content-with-users-in-alfresco-share]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="text2" index="0" type="text_box" index-type="keyword">
+		<dynamic-content language-id="en_US"><![CDATA[Recently, we implemented some probes of concept regarding associations in Alfresco ECMN, guidelined by the excellent blog post of Rui Fernandes Monteiro about associations in Alfresco. We also talk about the basics of this module in Alfresco Summit in Barcelona some weeks ago. I write here some guidelines of the module in preparation and testing.]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="image2" index="0" type="text" index-type="keyword">
+		<dynamic-content language-id="en_US"><![CDATA[http://www.zylk.net/image/image_gallery?uuid=cbe5b293-d0b4-4829-894f-83a33f6824b5&groupId=10102&t=1419327277762]]></dynamic-content>
+	</dynamic-element>
+</root>

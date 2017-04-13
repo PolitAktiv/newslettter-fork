@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<!DOCTYPE liferay-portlet-app PUBLIC "-//Liferay//DTD Portlet Application 6.1.0//EN" "http://www.liferay.com/dtd/liferay-portlet-app_6_1_0.dtd">
+
+<liferay-portlet-app>
+	<portlet>
+		<portlet-name>zn-admin</portlet-name>
+		<icon>/images/icon.png</icon>
+		<configuration-action-class>net.zylk.liferay.portlet.newsletter.controller.ConfigurationActionImpl</configuration-action-class> 
+		<scheduler-entry>
+			<scheduler-event-listener-class>net.zylk.liferay.portlet.newsletter.cron.NewsletterCronJob</scheduler-event-listener-class>
+			<trigger>
+				<simple>
+					<simple-trigger-value>15</simple-trigger-value>
+					<time-unit>minute</time-unit>
+					<!--
+					<time-unit>day</time-unit>
+					 -->
+				</simple>
+			</trigger>
+		</scheduler-entry>
+		<control-panel-entry-category>content</control-panel-entry-category>
+		<control-panel-entry-weight>100</control-panel-entry-weight>
+		<preferences-company-wide>false</preferences-company-wide>
+		<preferences-unique-per-layout>false</preferences-unique-per-layout>
+		<preferences-owned-by-group>true</preferences-owned-by-group>
+		<instanceable>false</instanceable>
+		<header-portlet-css>/css/main.css</header-portlet-css>
+		<footer-portlet-javascript>/js/main.js</footer-portlet-javascript>
+		<css-class-wrapper>zn-admin-portlet</css-class-wrapper>
+		<system>true</system>
+	</portlet>
+	<portlet>
+		<portlet-name>zn-user-subscription</portlet-name>
+		<icon>/images/icon.png</icon>
+		<instanceable>true</instanceable>
+		<header-portlet-css>/css/main.css</header-portlet-css>
+		<footer-portlet-javascript>/js/main.js</footer-portlet-javascript>
+		<css-class-wrapper>zn-user-subscription-portlet</css-class-wrapper>
+	</portlet>
+	<portlet>
+		<portlet-name>zn-subscription</portlet-name>
+		<icon>/images/icon.png</icon>
+		<friendly-url-mapper-class>com.liferay.portal.kernel.portlet.DefaultFriendlyURLMapper</friendly-url-mapper-class>
+		<friendly-url-mapping>subscription</friendly-url-mapping>
+		<friendly-url-routes>net/zylk/liferay/portlet/subscription/resources/friendly-url.xml</friendly-url-routes>
+		<instanceable>false</instanceable>
+		<header-portlet-css>/css/main.css</header-portlet-css>
+		<footer-portlet-javascript>/js/main.js</footer-portlet-javascript>
+		<css-class-wrapper>zn-subscription-portlet</css-class-wrapper>
+	</portlet>
+	<role-mapper>
+		<role-name>administrator</role-name>
+		<role-link>Administrator</role-link>
+	</role-mapper>
+	<role-mapper>
+		<role-name>guest</role-name>
+		<role-link>Guest</role-link>
+	</role-mapper>
+	<role-mapper>
+		<role-name>power-user</role-name>
+		<role-link>Power User</role-link>
+	</role-mapper>
+	<role-mapper>
+		<role-name>user</role-name>
+		<role-link>User</role-link>
+	</role-mapper>
+</liferay-portlet-app>

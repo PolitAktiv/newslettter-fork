@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="net.zylk.liferay.portal.model.Category">
+		<field name="categoryId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="name" type="String" localized="true">
+			<hint name="max-length">4000</hint>
+		</field>
+		<field name="description" type="String">
+			<hint-collection name="TEXTAREA" />
+		</field>
+	</model>
+	<model name="net.zylk.liferay.portal.model.Mailing">
+		<field name="mailingId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="newsletterId" type="long" />
+		<field name="newsletterName" type="String">
+			<hint name="max-length">255</hint>
+		</field>
+		<field name="emailFromName" type="String" />
+		<field name="emailFromAddress" type="String" />
+		<field name="startDate" type="Date" />
+		<field name="fromDate" type="Date" />
+		<field name="emailCount" type="int" />
+		<field name="status" type="int" />
+		<field name="isScheduled" type="boolean" />
+	</model>
+	<model name="net.zylk.liferay.portal.model.MailingLang">
+		<field name="mailingLangId" type="long" />
+		<field name="mailingId" type="long" />
+		<field name="languageId" type="String" />
+		<field name="emailSubjectPre" type="String">
+			<hint name="max-length">255</hint>
+		</field>
+		<field name="emailBodyPre" type="String">
+			<hint-collection name="CLOB" />
+		</field>
+	</model>
+	<model name="net.zylk.liferay.portal.model.MailingSubscriptor">
+		<field name="mailingSubscriptorId" type="long" />
+		<field name="mailingId" type="long" />
+		<field name="email" type="String" />
+		<field name="name" type="String" />
+		<field name="surname" type="String" />
+		<field name="languageId" type="String" />
+		<field name="emailSubject" type="String">
+			<hint name="max-length">255</hint>
+		</field>
+		<field name="emailBody" type="String">
+			<hint-collection name="CLOB" />
+		</field>
+		<field name="tokens" type="String">
+			<hint name="max-length">4000</hint>
+		</field>
+	</model>
+	<model name="net.zylk.liferay.portal.model.Newsletter">
+		<field name="newsletterId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="name" type="String">
+			<hint name="max-length">255</hint>
+		</field>
+		<field name="description" type="String">
+			<hint-collection name="TEXTAREA" />
+		</field>
+		<field name="categoryId" type="long" />
+		<field name="subject" type="String" localized="true">
+			<hint name="max-length">4000</hint>
+		</field>
+		<field name="articleId" type="String" />
+		<field name="articleGroupId" type="long" />
+		<field name="schedulerActive" type="boolean" />
+		<field name="schedulerType" type="int" />
+		<field name="schedulerDate" type="Date" />
+	</model>
+	<model name="net.zylk.liferay.portal.model.Subscriptor">
+		<field name="uuid" type="String" />
+		<field name="subscriptorId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="name" type="String" />
+		<field name="surname" type="String" />
+		<field name="email" type="String" />
+		<field name="languageId" type="String" />
+		<field name="selfSubscribe" type="boolean" />
+	</model>
+	<model name="net.zylk.liferay.portal.model.SubscriptorCategory">
+		<field name="subscriptorCategoryId" type="long" />
+		<field name="subscriptorId" type="long" />
+		<field name="categoryId" type="long" />
+	</model>
+</model-hints>

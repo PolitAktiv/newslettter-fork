@@ -1,0 +1,177 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.1.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_1_0.dtd">
+
+<service-builder package-path="net.zylk.liferay.portal">
+
+	<author>zylk.net</author>
+	<namespace>ZN</namespace>
+	
+	<entity name="Category" uuid="false" local-service="true" remote-service="false">
+
+		<column name="categoryId" type="long" primary="true" />
+		<column name="companyId" type="long" />
+		<column name="groupId" type="long" />
+		<column name="name" type="String" localized="true" />
+		<column name="description" type="String" />
+		
+		<finder name="CompanyIdAndGroupId" return-type="Collection">
+			<finder-column name="companyId" />
+			<finder-column name="groupId" />
+		</finder>
+
+		<reference package-path="com.liferay.portal" entity="Company" />
+		<reference package-path="com.liferay.portal" entity="Group" />
+		<reference package-path="com.liferay.portal" entity="User" />
+	</entity>
+	
+	<entity name="Subscriptor" uuid="true" local-service="true" remote-service="false">
+	
+		<column name="subscriptorId" type="long" primary="true" />
+		<column name="companyId" type="long" />
+		<column name="groupId" type="long" />
+		<column name="name" type="String" />
+		<column name="surname" type="String" />
+		<column name="email" type="String" />
+		<column name="languageId" type="String" />
+		<column name="selfSubscribe" type="boolean" />
+		
+		<finder name="EmailAndCompanyIdAndGroupId" return-type="Subscriptor">
+			<finder-column name="companyId" />
+			<finder-column name="groupId" />
+			<finder-column name="email" />
+		</finder>
+
+		<reference package-path="com.liferay.portal" entity="Company" />
+		<reference package-path="com.liferay.portal" entity="Group" />
+		<reference package-path="com.liferay.portal" entity="User" />
+		<reference package-path="com.liferay.portal" entity="Ticket" />
+	</entity>
+	
+	<entity name="UserSubscription" uuid="false" local-service="true" remote-service="false">
+		<reference package-path="com.liferay.portal" entity="Company" />
+		<reference package-path="com.liferay.portal" entity="Group" />
+		<reference package-path="com.liferay.portal" entity="User" />
+		<reference package-path="com.liferay.portal" entity="Ticket" />
+	</entity>
+	
+	<entity name="SubscriptorCategory" uuid="false" local-service="true" remote-service="false">
+
+		<column name="subscriptorCategoryId" type="long" primary="true" />
+		<column name="subscriptorId" type="long" />
+		<column name="categoryId" type="long" />
+
+		<finder name="SubscriptorId" return-type="Collection">
+			<finder-column name="subscriptorId" />
+		</finder>
+		
+		<finder name="CategoryId" return-type="Collection">
+			<finder-column name="categoryId" />
+		</finder>
+		
+		<finder name="SubscriptorIdAndCategoryId" return-type="SubscriptorCategory">
+		<finder-column name="subscriptorId" />
+			<finder-column name="categoryId" />
+		</finder>
+
+		<reference package-path="com.liferay.portal" entity="Company" />
+		<reference package-path="com.liferay.portal" entity="Group" />
+		<reference package-path="com.liferay.portal" entity="User" />
+	</entity>
+	
+	<entity name="Newsletter" uuid="false" local-service="true" remote-service="false">
+
+		<column name="newsletterId" type="long" primary="true" />
+		<column name="companyId" type="long" />
+		<column name="groupId" type="long" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+		<column name="name" type="String" />
+		<column name="description" type="String" />
+		<column name="categoryId" type="long" />
+		<column name="subject" type="String" localized="true" />
+		<column name="articleId" type="String" />
+		<column name="articleGroupId" type="long" />
+		<column name="schedulerActive" type="boolean" />		
+		<column name="schedulerType" type="int" />
+		<column name="schedulerDate" type="Date" />
+		
+		<finder name="CompanyIdAndGroupId" return-type="Collection">
+			<finder-column name="companyId" />
+			<finder-column name="groupId" />
+		</finder>
+		
+		<reference package-path="com.liferay.portal" entity="Company" />
+		<reference package-path="com.liferay.portal" entity="Group" />
+		<reference package-path="com.liferay.portal" entity="User" />
+	</entity>
+	
+	<entity name="Mailing" uuid="false" local-service="true" remote-service="false">
+
+		<column name="mailingId" type="long" primary="true" />
+		<column name="companyId" type="long" />
+		<column name="groupId" type="long" />
+		<column name="newsletterId" type="long" />
+		<column name="newsletterName" type="String" />
+		<column name="emailFromName" type="String" />
+		<column name="emailFromAddress" type="String" />
+		<column name="startDate" type="Date" />
+		<column name="fromDate" type="Date" />
+		<column name="emailCount" type="int" />
+		<column name="status" type="int" />
+		<column name="isScheduled" type="boolean" />
+		
+		<order by="desc">
+			<order-column name="startDate"></order-column>
+		</order>
+		
+		<finder name="CompanyIdAndGroupId" return-type="Collection">
+			<finder-column name="companyId" />
+			<finder-column name="groupId" />
+		</finder>
+		
+		<finder name="NewsletterId" return-type="Collection">
+			<finder-column name="newsletterId" />
+		</finder>
+
+		<reference package-path="com.liferay.portal" entity="Company" />
+		<reference package-path="com.liferay.portal" entity="Group" />
+		<reference package-path="com.liferay.portal" entity="User" />
+	</entity>
+	
+	<entity name="MailingLang" uuid="false" local-service="true" remote-service="false">
+
+		<column name="mailingLangId" type="long" primary="true" />
+		<column name="mailingId" type="long" />
+		<column name="languageId" type="String" />
+		<column name="emailSubjectPre" type="String" />
+		<column name="emailBodyPre" type="String" />
+
+		<finder name="MailingIdAndLanguageId" return-type="MailingLang">
+			<finder-column name="mailingId" />
+			<finder-column name="languageId" />
+		</finder>
+
+		<reference package-path="com.liferay.portal" entity="Company" />
+		<reference package-path="com.liferay.portal" entity="Group" />
+		<reference package-path="com.liferay.portal" entity="User" />
+	</entity>
+	
+	<entity name="MailingSubscriptor" uuid="false" local-service="true" remote-service="false">
+
+		<column name="mailingSubscriptorId" type="long" primary="true" />
+		<column name="mailingId" type="long" />
+		<column name="email" type="String" />
+		<column name="name" type="String" />
+		<column name="surname" type="String" />
+		<column name="languageId" type="String" />
+		<column name="emailSubject" type="String" />
+		<column name="emailBody" type="String" />
+		<column name="tokens" type="String" />
+
+		<reference package-path="com.liferay.portal" entity="Company" />
+		<reference package-path="com.liferay.portal" entity="Group" />
+		<reference package-path="com.liferay.portal" entity="User" />
+	</entity>
+	
+</service-builder>
+	

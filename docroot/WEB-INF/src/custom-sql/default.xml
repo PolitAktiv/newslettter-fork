@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<custom-sql>
+    <sql id="net.zylk.liferay.portal.service.persistence.SubscriptorFinder.findByCategoryId">
+        SELECT ZN_Subscriptor.*
+        FROM ZN_Subscriptor
+        INNER JOIN
+            ZN_SubscriptorCategory ON ZN_Subscriptor.subscriptorId = ZN_SubscriptorCategory.subscriptorId
+        WHERE
+            (ZN_SubscriptorCategory.categoryId = ?)
+    </sql>
+</custom-sql>

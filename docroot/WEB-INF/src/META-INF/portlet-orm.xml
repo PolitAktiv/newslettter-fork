@@ -1,0 +1,160 @@
+<?xml version="1.0"?>
+
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+	<persistence-unit-metadata>
+		<xml-mapping-metadata-complete/>
+		<persistence-unit-defaults>
+			<access>PROPERTY</access>
+		</persistence-unit-defaults>
+	</persistence-unit-metadata>
+	<mapped-superclass class="net.zylk.liferay.portal.model.impl.CategoryModelImpl">
+		<attributes>
+			<id name="categoryId" />
+			<basic name="companyId" />
+			<basic name="groupId" />
+			<basic name="name" />
+			<basic name="description" />
+			<transient name="modelAttributes" />
+			<transient name="nameCurrentLanguageId" />
+			<transient name="nameMap" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="net.zylk.liferay.portal.model.impl.MailingModelImpl">
+		<attributes>
+			<id name="mailingId" />
+			<basic name="companyId" />
+			<basic name="groupId" />
+			<basic name="newsletterId" />
+			<basic name="newsletterName" />
+			<basic name="emailFromName" />
+			<basic name="emailFromAddress" />
+			<basic name="startDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="fromDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="emailCount" />
+			<basic name="status" />
+			<basic name="isScheduled" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="net.zylk.liferay.portal.model.impl.MailingLangModelImpl">
+		<attributes>
+			<id name="mailingLangId" />
+			<basic name="mailingId" />
+			<basic name="languageId" />
+			<basic name="emailSubjectPre" />
+			<basic name="emailBodyPre" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="net.zylk.liferay.portal.model.impl.MailingSubscriptorModelImpl">
+		<attributes>
+			<id name="mailingSubscriptorId" />
+			<basic name="mailingId" />
+			<basic name="email" />
+			<basic name="name" />
+			<basic name="surname" />
+			<basic name="languageId" />
+			<basic name="emailSubject" />
+			<basic name="emailBody" />
+			<basic name="tokens" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="net.zylk.liferay.portal.model.impl.NewsletterModelImpl">
+		<attributes>
+			<id name="newsletterId" />
+			<basic name="companyId" />
+			<basic name="groupId" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="name" />
+			<basic name="description" />
+			<basic name="categoryId" />
+			<basic name="subject" />
+			<basic name="articleId" />
+			<basic name="articleGroupId" />
+			<basic name="schedulerActive" />
+			<basic name="schedulerType" />
+			<basic name="schedulerDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="subjectCurrentLanguageId" />
+			<transient name="subjectMap" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="net.zylk.liferay.portal.model.impl.SubscriptorModelImpl">
+		<attributes>
+			<id name="subscriptorId" />
+			<basic name="uuid">
+				<column name="UUID_" />
+			</basic>
+			<basic name="companyId" />
+			<basic name="groupId" />
+			<basic name="name" />
+			<basic name="surname" />
+			<basic name="email" />
+			<basic name="languageId" />
+			<basic name="selfSubscribe" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="net.zylk.liferay.portal.model.impl.SubscriptorCategoryModelImpl">
+		<attributes>
+			<id name="subscriptorCategoryId" />
+			<basic name="subscriptorId" />
+			<basic name="categoryId" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<entity class="net.zylk.liferay.portal.model.impl.CategoryImpl" name="Category">
+		<table name="ZN_Category" />
+		<attributes />
+	</entity>
+	<entity class="net.zylk.liferay.portal.model.impl.MailingImpl" name="Mailing">
+		<table name="ZN_Mailing" />
+		<attributes />
+	</entity>
+	<entity class="net.zylk.liferay.portal.model.impl.MailingLangImpl" name="MailingLang">
+		<table name="ZN_MailingLang" />
+		<attributes />
+	</entity>
+	<entity class="net.zylk.liferay.portal.model.impl.MailingSubscriptorImpl" name="MailingSubscriptor">
+		<table name="ZN_MailingSubscriptor" />
+		<attributes />
+	</entity>
+	<entity class="net.zylk.liferay.portal.model.impl.NewsletterImpl" name="Newsletter">
+		<table name="ZN_Newsletter" />
+		<attributes />
+	</entity>
+	<entity class="net.zylk.liferay.portal.model.impl.SubscriptorImpl" name="Subscriptor">
+		<table name="ZN_Subscriptor" />
+		<attributes />
+	</entity>
+	<entity class="net.zylk.liferay.portal.model.impl.SubscriptorCategoryImpl" name="SubscriptorCategory">
+		<table name="ZN_SubscriptorCategory" />
+		<attributes />
+	</entity>
+</entity-mappings>

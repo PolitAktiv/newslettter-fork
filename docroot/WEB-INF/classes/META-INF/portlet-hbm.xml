@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="net.zylk.liferay.portal.model.Category" />
+	<import class="net.zylk.liferay.portal.model.Mailing" />
+	<import class="net.zylk.liferay.portal.model.MailingLang" />
+	<import class="net.zylk.liferay.portal.model.MailingSubscriptor" />
+	<import class="net.zylk.liferay.portal.model.Newsletter" />
+	<import class="net.zylk.liferay.portal.model.Subscriptor" />
+	<import class="net.zylk.liferay.portal.model.SubscriptorCategory" />
+	<import class="net.zylk.liferay.portal.model.UserSubscription" />
+	<class name="net.zylk.liferay.portal.model.impl.CategoryImpl" table="ZN_Category">
+		<cache usage="read-write" />
+		<id name="categoryId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="description" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="net.zylk.liferay.portal.model.impl.MailingImpl" table="ZN_Mailing">
+		<cache usage="read-write" />
+		<id name="mailingId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="newsletterId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="newsletterName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="emailFromName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="emailFromAddress" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="startDate" type="org.hibernate.type.TimestampType" />
+		<property name="fromDate" type="org.hibernate.type.TimestampType" />
+		<property name="emailCount" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="isScheduled" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+	</class>
+	<class name="net.zylk.liferay.portal.model.impl.MailingLangImpl" table="ZN_MailingLang">
+		<cache usage="read-write" />
+		<id name="mailingLangId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="mailingId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="languageId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="emailSubjectPre" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="emailBodyPre" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="net.zylk.liferay.portal.model.impl.MailingSubscriptorImpl" table="ZN_MailingSubscriptor">
+		<cache usage="read-write" />
+		<id name="mailingSubscriptorId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="mailingId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="email" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="surname" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="languageId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="emailSubject" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="emailBody" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="tokens" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="net.zylk.liferay.portal.model.impl.NewsletterImpl" table="ZN_Newsletter">
+		<cache usage="read-write" />
+		<id name="newsletterId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="description" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="categoryId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="subject" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="articleId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="articleGroupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="schedulerActive" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="schedulerType" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="schedulerDate" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="net.zylk.liferay.portal.model.impl.SubscriptorImpl" table="ZN_Subscriptor">
+		<cache usage="read-write" />
+		<id name="subscriptorId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="uuid" type="com.liferay.portal.dao.orm.hibernate.StringType" column="uuid_" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="surname" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="email" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="languageId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="selfSubscribe" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+	</class>
+	<class name="net.zylk.liferay.portal.model.impl.SubscriptorCategoryImpl" table="ZN_SubscriptorCategory">
+		<cache usage="read-write" />
+		<id name="subscriptorCategoryId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="subscriptorId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="categoryId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+</hibernate-mapping>

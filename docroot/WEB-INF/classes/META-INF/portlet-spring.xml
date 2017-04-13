@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="net.zylk.liferay.portal.service.CategoryLocalService" class="net.zylk.liferay.portal.service.impl.CategoryLocalServiceImpl" />
+	<bean id="net.zylk.liferay.portal.service.persistence.CategoryPersistence" class="net.zylk.liferay.portal.service.persistence.CategoryPersistenceImpl" parent="basePersistence" />
+	<bean id="net.zylk.liferay.portal.service.MailingLocalService" class="net.zylk.liferay.portal.service.impl.MailingLocalServiceImpl" />
+	<bean id="net.zylk.liferay.portal.service.persistence.MailingPersistence" class="net.zylk.liferay.portal.service.persistence.MailingPersistenceImpl" parent="basePersistence" />
+	<bean id="net.zylk.liferay.portal.service.MailingLangLocalService" class="net.zylk.liferay.portal.service.impl.MailingLangLocalServiceImpl" />
+	<bean id="net.zylk.liferay.portal.service.persistence.MailingLangPersistence" class="net.zylk.liferay.portal.service.persistence.MailingLangPersistenceImpl" parent="basePersistence" />
+	<bean id="net.zylk.liferay.portal.service.MailingSubscriptorLocalService" class="net.zylk.liferay.portal.service.impl.MailingSubscriptorLocalServiceImpl" />
+	<bean id="net.zylk.liferay.portal.service.persistence.MailingSubscriptorPersistence" class="net.zylk.liferay.portal.service.persistence.MailingSubscriptorPersistenceImpl" parent="basePersistence" />
+	<bean id="net.zylk.liferay.portal.service.NewsletterLocalService" class="net.zylk.liferay.portal.service.impl.NewsletterLocalServiceImpl" />
+	<bean id="net.zylk.liferay.portal.service.persistence.NewsletterPersistence" class="net.zylk.liferay.portal.service.persistence.NewsletterPersistenceImpl" parent="basePersistence" />
+	<bean id="net.zylk.liferay.portal.service.SubscriptorLocalService" class="net.zylk.liferay.portal.service.impl.SubscriptorLocalServiceImpl" />
+	<bean id="net.zylk.liferay.portal.service.persistence.SubscriptorPersistence" class="net.zylk.liferay.portal.service.persistence.SubscriptorPersistenceImpl" parent="basePersistence" />
+	<bean id="net.zylk.liferay.portal.service.persistence.SubscriptorFinder" class="net.zylk.liferay.portal.service.persistence.SubscriptorFinderImpl" parent="basePersistence" />
+	<bean id="net.zylk.liferay.portal.service.SubscriptorCategoryLocalService" class="net.zylk.liferay.portal.service.impl.SubscriptorCategoryLocalServiceImpl" />
+	<bean id="net.zylk.liferay.portal.service.persistence.SubscriptorCategoryPersistence" class="net.zylk.liferay.portal.service.persistence.SubscriptorCategoryPersistenceImpl" parent="basePersistence" />
+	<bean id="net.zylk.liferay.portal.service.UserSubscriptionLocalService" class="net.zylk.liferay.portal.service.impl.UserSubscriptionLocalServiceImpl" />
+</beans>

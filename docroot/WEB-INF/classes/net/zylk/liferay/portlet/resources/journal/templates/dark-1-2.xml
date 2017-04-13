@@ -1,0 +1,356 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Primera Newsletter</title>
+		
+	<style type="text/css">
+		#outlook a{
+			padding:0;
+		}
+		body{
+			width:100% !important;
+		}
+		.ReadMsgBody{
+			width:100%;
+		}
+		.ExternalClass{
+			width:100%;
+		}
+		body{
+			-webkit-text-size-adjust:none;
+		}
+		body{
+			margin:0;
+			padding:0;
+		}
+		img{
+			border:0;
+			height:auto;
+			line-height:100%;
+			outline:none;
+			text-decoration:none;
+		}
+		table td{
+			border-collapse:collapse;
+		}
+		#backgroundTable{
+			height:100% !important;
+			margin:0;
+			padding:0;
+			width:100% !important;
+		}
+		body,#backgroundTable,#templateFooter{
+			background-color:#707070;
+		}
+		h1,.h1{
+			color:#FFFFFF;
+			display:block;
+			font-family:Helvetica;
+			font-size:30px;
+			font-weight:bold;
+			line-height:100%;
+			margin-top:0;
+			margin-right:0;
+			margin-bottom:10px;
+			margin-left:0;
+			text-align:left;
+		}
+		h2,.h2{
+			color:#101010;
+			display:block;
+			font-family:Helvetica;
+			font-size:20px;
+			font-weight:bold;
+			line-height:100%;
+			margin-top:0;
+			margin-right:0;
+			margin-bottom:10px;
+			margin-left:0;
+			text-align:left;
+		}
+		h3,.h3{
+			color:#202020;
+			display:block;
+			font-family:Helvetica;
+			font-size:26px;
+			font-weight:bold;
+			line-height:100%;
+			margin-top:0;
+			margin-right:0;
+			margin-bottom:10px;
+			margin-left:0;
+			text-align:left;
+		}
+		h4,.h4{
+			color:#202020;
+			display:block;
+			font-family:Helvetica;
+			font-size:22px;
+			font-weight:bold;
+			line-height:100%;
+			margin-top:0;
+			margin-right:0;
+			margin-bottom:10px;
+			margin-left:0;
+			text-align:left;
+		}
+		#templatePreheader{
+			background-color:#101010;
+		}
+		.preheaderContent{
+			color:#FFFFFF;
+			font-family:Helvetica;
+			font-size:10px;
+			line-height:125%;
+			text-align:left;
+		}
+		.preheaderContent a:link,.preheaderContent a:visited,.preheaderContent a .yshortcuts {
+			color:#FF0000;
+			font-weight:normal;
+			text-decoration:none;
+		}
+		#templateHeader{
+			background-color:#FFFFFF;
+			border-bottom:0;
+		}
+		.headerContent{
+			color:#202020;
+			font-family:Helvetica;
+			font-size:34px;
+			font-weight:bold;
+			line-height:100%;
+			padding:20px;
+			text-align:left;
+			vertical-align:middle;
+		}
+		.headerContent a:link,.headerContent a:visited,.headerContent a .yshortcuts {
+			color:#FF0000;
+			font-weight:normal;
+			text-decoration:none;
+		}
+		#headerImage{
+			height:auto;
+			max-width:600px !important;
+		}
+		#templateContainer{
+			background-color:#FFFFFF;
+		}
+		.bodyContent{
+			color:#FFFFFF;
+			font-family:Helvetica;
+			font-size:15px;
+			line-height:150%;
+			text-align:left;
+		}
+		.bodyContent a:link,.bodyContent a:visited,.bodyContent a .yshortcuts {
+			color:#FF0000;
+			font-weight:normal;
+			text-decoration:none;
+		}
+		.bodyContent img{
+			display:inline;
+			height:auto;
+		}
+		.leftColumnContent{
+			color:#101010;
+			font-family:Helvetica;
+			font-size:13px;
+			line-height:150%;
+			text-align:left;
+		}
+		.leftColumnContent a:link,.leftColumnContent a:visited,.leftColumnContent a .yshortcuts {
+			color:#FF0000;
+			font-weight:normal;
+			text-decoration:none;
+		}
+		.rightColumnContent{
+			color:#101010;
+			font-family:Helvetica;
+			font-size:13px;
+			line-height:150%;
+			text-align:left;
+		}
+		.rightColumnContent a:link,.rightColumnContent a:visited,.rightColumnContent a .yshortcuts {
+			color:#FF0000;
+			font-weight:normal;
+			text-decoration:none;
+		}
+		.leftColumnContent img,.rightColumnContent img{
+			display:inline;
+			height:auto;
+			max-width:260px !important;
+		}
+		#templateFooter{
+			border-top:0;
+		}
+		.footerContent{
+			color:#CCCCCC;
+			font-family:Helvetica;
+			font-size:10px;
+			line-height:150%;
+			text-align:left;
+		}
+		.footerContent a:link,.footerContent a:visited,.footerContent a .yshortcuts {
+			color:#CCCCCC;
+			font-weight:normal;
+			text-decoration:underline;
+		}
+		.footerContent img{
+			display:inline;
+		}
+		#monkeyRewards img{
+			max-width:190px;
+		}
+</style></head>
+    <body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0" style="-webkit-text-size-adjust: none;margin: 0;padding: 0;background-color: #707070;width: 100% !important;">
+    	<center>
+        	<table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="backgroundTable" style="margin: 0;padding: 0;background-color: #707070;height: 100% !important;width: 100% !important;">
+            	<tr>
+                	<td align="center" valign="top" style="border-collapse: collapse;">
+                        <!-- // Begin Template Preheader \\ -->
+                        <table border="0" cellpadding="10" cellspacing="0" width="600" id="templatePreheader" style="background-color: #101010;">
+                            <tr>
+                                <td valign="top" class="preheaderContent" style="border-collapse: collapse;color: #FFFFFF;font-family: Helvetica;font-size: 10px;line-height: 125%;text-align: left;">
+                                
+                                	<!-- // Begin Module: Standard Preheader \ -->
+                                    <table border="0" cellpadding="10" cellspacing="0" width="100%">
+                                    	<tr>
+                                        	<td valign="top" style="border-collapse: collapse;">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                	<!-- // End Module: Standard Preheader \ -->
+                                
+                                </td>
+                            </tr>
+                        </table>
+                        <!-- // End Template Preheader \\ -->
+                    	<table border="0" cellpadding="0" cellspacing="0" width="600" id="templateContainer" style="background-color: #FFFFFF;">
+                        	<tr>
+                            	<td align="center" valign="top" style="border-collapse: collapse;">
+                                    <!-- // Begin Template Header \\ -->
+                                	<table border="0" cellpadding="0" cellspacing="0" width="600" id="templateHeader" style="background-color: #FFFFFF;border-bottom: 0;">
+                                        <tr>
+                                            <td class="headerContent" style="border-collapse: collapse;color: #202020;font-family: Helvetica;font-size: 34px;font-weight: bold;line-height: 100%;padding: 20px;text-align: left;vertical-align: middle;">
+                                                <a href="http://www.zylk.net">
+												    <img src="http://www.zylk.net/image/image_gallery?uuid=4543d49a-3a93-4423-b5cb-0cdf4fa6245c&groupId=10102&t=1419339628755" alt="" border="0" style="margin: 0;padding: 0;max-width: 600px;border: 0;height: auto;line-height: 100%;outline: none;text-decoration: none;" id="headerImage campaign-icon">
+												</a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <!-- // End Template Header \\ -->
+                                </td>
+                            </tr>
+                        	<tr>
+                            	<td align="center" valign="top" style="border-collapse: collapse;">
+                                    <!-- // Begin Template Body \\ -->
+                                	<table border="0" cellpadding="0" cellspacing="0" width="600" id="templateBody">
+                                    	<tr mc:repeatable="repeat_1" mc:repeatindex="0" mc:hideable="hideable_repeat_1_1" mchideable="hideable_repeat_1_1">
+                                        	<td colspan="3" valign="top" class="bodyContent" style="border-collapse: collapse;color: #FFFFFF;font-family: Helvetica;font-size: 15px;line-height: 150%;text-align: left;">
+                                                <table border="0" cellpadding="20" cellspacing="0" width="100%">
+                                                	<tr>
+                                                    	<td valign="top" style="padding-bottom: 0;border-collapse: collapse;">
+                                                        	<img src="$mainImage.getData()" alt="" border="0" style="margin: 0;padding: 0;max-width: 560px;border: 0;height: auto;line-height: 100%;outline: none;text-decoration: none;display: inline;">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td valign="top" style="padding-top: 0;border-collapse: collapse;">
+                                                        	<table border="0" cellpadding="20" cellspacing="0" width="100%" style="background-color:#101010;">
+                                                            	<tr>
+                                                                	<td valign="top" class="bodyContent" style="border-collapse: collapse;color: #FFFFFF;font-family: Helvetica;font-size: 15px;line-height: 150%;text-align: left;"><h1 style="color: #FFFFFF;display: block;font-family: Helvetica;font-size: 30px;font-weight: bold;line-height: 100%;margin-top: 0;margin-right: 0;margin-bottom: 10px;margin-left: 0;text-align: left;">$mainTitle.getData()</h1>
+$mainText.getData()</td>
+                                                                </tr>
+                                                            </table>
+														</td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    	<tr>
+                                        	<td valign="top" width="270" style="border-collapse: collapse;">
+                                                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                    <tr mc:repeatable="repeat_2" mc:repeatindex="0" mc:hideable="hideable_repeat_2_1" mchideable="hideable_repeat_2_1">
+                                                        <td valign="top" style="border-collapse: collapse;">
+                                                        	<table border="0" cellpadding="20" cellspacing="0" width="100%">
+                                                            	<tr mc:hideable="hideable_repeat_2_2" mchideable="hideable_repeat_2_2">
+                                                                	<td valign="top" style="border-collapse: collapse;">
+			                                                            <img src="$image1.getData()" alt="" border="0" style="margin: 0;padding: 0;max-width: 260px;border: 0;height: auto;line-height: 100%;outline: none;text-decoration: none;">
+                                                            		</td>
+                                                                </tr>
+                                                                <tr>
+                                                                	<td valign="top" class="leftColumnContent" style="padding-top: 20px;padding-bottom: 20px;border-collapse: collapse;color: #101010;font-family: Helvetica;font-size: 13px;line-height: 150%;text-align: left;">
+                                                                       <h2 style="color: #101010;display: block;font-family: Helvetica;font-size: 20px;font-weight: bold;line-height: 100%;margin-top: 0;margin-right: 0;margin-bottom: 10px;margin-left: 0;text-align: left;">$title1.getData()</h2>
+                                                                       $text1.getData()
+                                                            		</td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        	<td valign="top" width="270" style="border-collapse: collapse;">
+                                                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                    <tr mc:repeatable="repeat_3" mc:repeatindex="0" mc:hideable="hideable_repeat_3_1" mchideable="hideable_repeat_3_1">
+                                                        <td valign="top" style="border-collapse: collapse;">
+                                                        	<table border="0" cellpadding="20" cellspacing="0" width="100%">
+                                                            	<tr mc:hideable="hideable_repeat_3_2" mchideable="hideable_repeat_3_2">
+                                                                	<td valign="top" style="border-collapse: collapse;">
+			                                                            <img src="$image2.getData()" alt="" border="0" style="margin: 0;padding: 0;max-width: 260px;border: 0;height: auto;line-height: 100%;outline: none;text-decoration: none;">
+                                                            		</td>
+                                                                </tr>
+                                                                <tr>
+                                                                	<td valign="top" class="rightColumnContent" style="padding-top: 20px;padding-bottom: 20px;border-collapse: collapse;color: #101010;font-family: Helvetica;font-size: 13px;line-height: 150%;text-align: left;">
+                                                                       <h2 style="color: #101010;display: block;font-family: Helvetica;font-size: 20px;font-weight: bold;line-height: 100%;margin-top: 0;margin-right: 0;margin-bottom: 10px;margin-left: 0;text-align: left;">$title2.getData()</h2>
+                                                                       $text2.getData()
+                                                            		</td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <!-- // End Template Body \\ -->
+                                </td>
+                            </tr>
+                        	<tr>
+                            	<td align="center" valign="top" style="border-collapse: collapse;">
+                                    <!-- // Begin Template Footer \\ -->
+                                	<table border="0" cellpadding="0" cellspacing="0" width="600" id="templateFooter" style="background-color: #707070;border-top: 0;">
+                                    	<tr>
+                                        	<td valign="top" class="footerContent" style="padding-top: 20px;border-collapse: collapse;color: #CCCCCC;font-family: Helvetica;font-size: 10px;line-height: 150%;text-align: left;">
+                                            
+                                                <!-- // Begin Module: Standard Footer \\ -->
+                                                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                    <tr>
+                                                        <td valign="top" style="border-collapse: collapse;">
+                                                            <span style="font-size: 13px;">Newsletter plugin developed by <a href="http://www.zylk.net"><b>zylk.net</b></a></span><br>
+                                                            <a href="https://www.flickr.com/photos/aalto-cs/9685029401/">Image</a> by Glen Forde<br>
+                                                            <a href="@unsubscribe_url@" style="color: #CCCCCC;font-weight: normal;text-decoration: underline;">Unsubscribe from this newsletter</a>
+                                                        </td>
+                                                        <td valign="top" width="200" id="monkeyRewards" style="border-collapse: collapse;">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2" valign="middle" id="utility" style="padding-top: 20px;border-collapse: collapse;">
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <!-- // End Module: Standard Footer \\ -->
+                                            
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <!-- // End Template Footer \\ -->
+                                </td>
+                            </tr>
+                        </table>
+                        <br>
+                    </td>
+                </tr>
+            </table>
+        </center>
+    </body>
+</html>
