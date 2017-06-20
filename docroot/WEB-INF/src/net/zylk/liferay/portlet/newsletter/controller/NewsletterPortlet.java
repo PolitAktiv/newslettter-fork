@@ -70,7 +70,7 @@ public class NewsletterPortlet extends MVCPortlet {
 	private static Log _log = LogFactoryUtil.getLog(NewsletterPortlet.class);
 
 	
-	private static final int LIMIT_RESULTS = 100; // listados que tienen buscador
+	private static final int LIMIT_RESULTS = 1000; // listados que tienen buscador
 	private static final int LIMIT_RESULTS_MAX = 1000; // listados que no tienen buscador
 
 	private static final String categoryListJsp = "/jsp/portlet/newsletter/category-list.jsp";
