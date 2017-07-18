@@ -69,6 +69,7 @@ public class NewsletterPortlet extends MVCPortlet {
 
 	private static Log _log = LogFactoryUtil.getLog(NewsletterPortlet.class);
 
+	// Limits the results of subscribers being shown
 	private static final int LIMIT_RESULTS = 10000; 
 	private static final int LIMIT_RESULTS_MAX = 10000; 
 	//private static final int LIMIT_RESULTS = SubscriptorLocalServiceUtil.getSubscriptorsCount(); 
