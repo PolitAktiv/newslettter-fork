@@ -69,9 +69,10 @@ public class NewsletterPortlet extends MVCPortlet {
 
 	private static Log _log = LogFactoryUtil.getLog(NewsletterPortlet.class);
 
-	
-	private static final int LIMIT_RESULTS = 100; // listados que tienen buscador
-	private static final int LIMIT_RESULTS_MAX = 1000; // listados que no tienen buscador
+	private static final int LIMIT_RESULTS = 10000; 
+	private static final int LIMIT_RESULTS_MAX = 10000; 
+	//private static final int LIMIT_RESULTS = SubscriptorLocalServiceUtil.getSubscriptorsCount(); 
+	//private static final int LIMIT_RESULTS_MAX = SubscriptorLocalServiceUtil.getSubscriptorsCount(); 
 
 	private static final String categoryListJsp = "/jsp/portlet/newsletter/category-list.jsp";
 	private static final String categoryAddJsp = "/jsp/portlet/newsletter/category-add.jsp";
@@ -248,6 +249,39 @@ public class NewsletterPortlet extends MVCPortlet {
 		renderRequest.setAttribute("mainTab", "subscriptorList");
 		
 		include(subscriptorListJsp, renderRequest, renderResponse);
+		
+		// with paging
+		
+		/*
+		PortletURL portletURL = renderResponse.createRenderURL();
+	    SearchContainer searchContainer = new SearchContainer(renderRequest, null, null, SearchContainer.DEFAULT_CUR_PARAM, 20, portletURL, null, null);
+	    Model[] subscriptorResults = (Model[]) request.getAttribute("subscriptorResults");
+	    Integer count = (Integer)request.getAttribute("count");
+	    String keywords = (String)request.getAttribute("keywords");
+	    List<Subscriptor> list = new ArrayList<Subscriptor>();
+	    if(subscriptorResults != null){
+	        for(Model subscriptor : subscriptorResults){
+	            list.add((Subscriptor)subscriptor);
+	        }
+	    }
+	    searchContainer.setResults(list);
+	    if(count != null)
+	       searchContainer.setTotal(count);
+	    List<String> headerNames = new ArrayList<String>();
+	    headerNames.add("Name");
+	    headerNames.add("Nachname");
+	    headerNames.add("E-Mail");
+	    searchContainer.setHeaderNames(headerNames);
+	    List resultRows = searchContainer.getResultRows();
+	    for(int i=0; i<list.size(); i++){
+	        Subscriptor subscriptor = (Subscriptor)list.get(i);
+	        ResultRow row = new ResultRow(subscriptor, subscriptor.getName(), i);
+	        row.addText(subscriptor.getSurname());
+	        row.addText(subscriptor.getName());
+	        row.addText(subscriptor.getEmail());
+	        resultRows.add(row);
+	    }    
+	    */
 	}
 	
 	public void doViewAddSubscriptor(RenderRequest renderRequest, RenderResponse renderResponse) throws IOException, PortletException, SystemException, PortalException {

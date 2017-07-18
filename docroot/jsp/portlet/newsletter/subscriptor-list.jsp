@@ -9,6 +9,7 @@
 <%
 	List<Subscriptor> subscriptors = (List<Subscriptor>)request.getAttribute("subscriptors");
 	int count = ParamUtil.getInteger(request, "count");
+	count = 3;
 %>
 <jsp:useBean id="keywords" type="java.lang.String" scope="request" />
 
@@ -38,10 +39,12 @@
 	<portlet:param name="view" value="importSubscriptor" />
 </portlet:renderURL>
 
+<portlet:resourceURL>
 <aui:button-row>
 	<aui:button name="" type="submit" value="zylk.newsletter.subscriptor.list.button.add" onClick="<%= addSubscriptorURL.toString() %>" />
 	<aui:button name="" type="submit" value="zylk.newsletter.subscriptor.list.button.import" onClick="<%= importSubscriptorURL.toString() %>" />
 </aui:button-row>
+</portlet:resourceURL>
 
 <liferay-ui:search-container emptyResultsMessage="zn.general.list.empty">
 	
@@ -71,7 +74,7 @@
 		
 	</liferay-ui:search-container-row>
 	
-	<liferay-ui:search-iterator paginate="false"/>
+	<liferay-ui:search-iterator paginate="true"/>
 	
 </liferay-ui:search-container>
 

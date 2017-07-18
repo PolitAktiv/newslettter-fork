@@ -1,11 +1,13 @@
 package net.zylk.liferay.portal.service.impl;
 
 import java.io.FileReader;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
 import java.util.List;
+import java.lang.StringBuilder;
 
 import net.zylk.liferay.portal.DuplicateSubscriptorException;
 import net.zylk.liferay.portal.EmptyFieldException;
@@ -160,6 +162,38 @@ public class SubscriptorLocalServiceImpl extends SubscriptorLocalServiceBaseImpl
 			throw new ImportException(e);
 		}
 	}
+	
+	/* 
+	
+	public void exportSubscriptors(ResourceRequest req, ResourceResponse res) {
+
+		try {
+			StringBuilder builder = new StringBuilder();
+			
+			for (Subscriptor subscriptor : subscriptorLocalService.getSubscriptors(0,subscriptorLocalService.getSubscriptorsCount())) {
+				builder.append(subscriptor.getSurname());
+				builder.append(',');
+				builder.append(subscriptor.getName());
+				builder.append(',');
+				builder.append(subscriptor.getEmail());
+				builder.append(',');
+				builder.append(subscriptor.getLanguageId());
+				builder.append(',');
+				builder.append('\n');
+			}
+			
+			String fileName = "subscriptorExport.csv";
+			byte[] bytes = builder.toString().getBytes();
+			PortletResponseUtil.sendFile(req, res, fileName, bytes);
+			
+		} catch (IOException e) {
+			//throw new ExportException(e);
+		} catch (RuntimeException e) {
+			//throw new ExportException(e);
+		}
+	}
+	
+	 */
 	
 	private void validateNewSubscritor(long companyId, long groupId, String name, String surname, String email) throws PortalException, SystemException {
 		
