@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="docroot/WEB-INF/src"/>
+	<classpathentry kind="src" path="docroot/WEB-INF/service"/>
+	<classpathentry kind="lib" path="/usr/share/tomcat7/lib/jsp-api.jar"/>
+	<classpathentry kind="lib" path="/usr/share/tomcat7/lib/servlet-api.jar"/>
+	<classpathentry kind="lib" path="docroot/WEB-INF/lib/commons-csv-1.0.jar"/>
+	<classpathentry kind="con" path="com.liferay.ide.eclipse.server.plugin.container/portlet"/>
+	<classpathentry kind="var" path="PA_LIFERAY_PORTAL/ext/portal-service.jar"/>
+	<classpathentry kind="var" path="PA_LIFERAY_PORTAL/jsp-api.jar"/>
+	<classpathentry kind="var" path="PA_LIFERAY_PORTAL/servlet-api.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/com.liferay.ide.eclipse.server.tomcat.runtimeClasspathProvider/Liferay v6.2 CE (Tomcat 7)">
+		<attributes>
+			<attribute name="owner.project.facets" value="jst.web"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/java-6-openjdk-amd64">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
